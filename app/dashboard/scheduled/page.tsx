@@ -58,6 +58,7 @@ export default async function ScheduledPage() {
                 <Switch
                   name={`isActive-${item.id}`}
                   defaultChecked={item.isActive}
+                  className="cursor-pointer"
                 />
                 <p>{item.day}</p>
               </div>
@@ -70,7 +71,7 @@ export default async function ScheduledPage() {
                 <SelectContent>
                   <SelectGroup>
                     {times.map((time, idx) => (
-                      <SelectItem key={`from-${item.id}-${idx}`} value={time.time}>
+                      <SelectItem className="cursor-pointer" key={`from-${item.id}-${idx}`} value={time.time}>
                         {time.time}
                       </SelectItem>
                     ))}
@@ -86,7 +87,7 @@ export default async function ScheduledPage() {
                 <SelectContent>
                   <SelectGroup>
                     {times.map((time, idx) => (
-                      <SelectItem key={`till-${item.id}-${idx}`} value={time.time}>
+                      <SelectItem className="cursor-pointer" key={`till-${item.id}-${idx}`} value={time.time}>
                         {time.time}
                       </SelectItem>
                     ))}
