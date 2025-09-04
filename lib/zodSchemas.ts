@@ -53,3 +53,8 @@ export function onboardingSchemaValidation(options?: {
       .max(150, { message: "Full name must be at most 150 characters" }),
   });
 }
+
+export const settingsSchema = z.object({
+  fullName: z.string().min(5).max(150),
+  profileImage: z.string(),
+});
