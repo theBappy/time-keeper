@@ -27,10 +27,14 @@ async function getData(userId: string) {
     },
     select: {
       userName: true,
+      grantId: true,
     },
   });
   if (!data?.userName) {
     return redirect("/onboarding");
+  }
+  if(!data.grantId){
+    return redirect("/onboarding/grant-id")
   }
   return data;
 }
