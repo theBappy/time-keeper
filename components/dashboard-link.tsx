@@ -36,8 +36,8 @@ export const dashboardLinks: Props[] = [
   },
   {
     id: 2,
-    name: "Availability",
-    href: "/dashboard/availability",
+    name: "Scheduled",
+    href: "/dashboard/scheduled",
     icon: CalendarCheck,
   },
   {
