@@ -98,7 +98,7 @@ export default async function ScheduledPage() {
           ))}
         </CardContent>
         <CardFooter>
-          <SubmitButton text="Save changes" />
+          <SubmitButton className="cursor-pointer" text="Save changes" />
         </CardFooter>
       </form>
     </Card>
