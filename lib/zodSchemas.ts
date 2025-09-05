@@ -58,3 +58,25 @@ export const settingsSchema = z.object({
   fullName: z.string().min(5).max(150),
   profileImage: z.string(),
 });
+
+export const eventTypeSchema = z.object({
+  title: z
+    .string()
+    .min(3, { message: "Title must be at least 3 characters long." })
+    .max(150, { message: "Title cannot exceed 150 characters." }),
+  duration: z
+    .number()
+    .min(15, { message: "Duration must be at least 15 minutes." })
+    .max(60, { message: "Duration cannot be longer than 60 minutes." }),
+  url: z
+    .string()
+    .min(3, { message: "URL slug must be at least 3 characters long." })
+    .max(150, { message: "URL slug cannot exceed 150 characters." }),
+  description: z
+    .string()
+    .min(3, { message: "Description must be at least 3 characters long." })
+    .max(300, { message: "Description cannot exceed 300 characters." }),
+  videoCallSoftware: z
+    .string()
+    .min(3, { message: "Please select a valid video call provider." }),
+});
