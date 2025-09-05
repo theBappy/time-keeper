@@ -86,7 +86,7 @@ export default function NewEventCreationPage() {
                   placeholder="example-url-1"
                 />
               </div>
-                            <p className="text-red-500 text-sm">{fields.url.errors}</p>
+              <p className="text-red-500 text-sm">{fields.url.errors}</p>
             </div>
             <div className="flex flex-col gap-y-2">
               <Label>Description</Label>
@@ -96,7 +96,9 @@ export default function NewEventCreationPage() {
                 defaultValue={fields.description.initialValue}
                 placeholder="Let's have a meeting to talk!"
               />
-                            <p className="text-red-500 text-sm">{fields.description.errors}</p>
+              <p className="text-red-500 text-sm">
+                {fields.description.errors}
+              </p>
             </div>
             <div className="flex flex-col gap-y-2">
               <Label>Duration</Label>
@@ -118,7 +120,7 @@ export default function NewEventCreationPage() {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-                            <p className="text-red-500 text-sm">{fields.duration.errors}</p>
+              <p className="text-red-500 text-sm">{fields.duration.errors}</p>
             </div>
             <div className="grid gap-y-2">
               <Label>Video Call Provider</Label>
@@ -161,8 +163,9 @@ export default function NewEventCreationPage() {
                   Microsoft Teams
                 </Button>
               </ButtonGroup>
-                            <p className="text-red-500 text-sm">{fields.videoCallSoftware.errors}</p>
-
+              <p className="text-red-500 text-sm">
+                {fields.videoCallSoftware.errors}
+              </p>
             </div>
           </CardContent>
           <CardFooter className="w-full mt-5 flex justify-between">
