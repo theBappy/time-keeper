@@ -1,11 +1,8 @@
-import { Calendar } from "@/components/meeting-form/calendar";
+
+import { RenderCalendar } from "@/components/meeting-form/render-calender";
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardContent,
-  CardDescription,
-  CardFooter,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { prisma } from "@/lib/db";
@@ -51,15 +48,29 @@ async function getData(eventUrl: string, userName: string) {
 
 export default async function BookingForm({
   params,
+  searchParams,
 }: {
-  params: { username: string; eventUrl: string };
+  params: Promise<{ username: string; eventUrl: string }>;
+  searchParams: {date?: string}
 }) {
-  const data = await getData(params.eventUrl, params.username);
+  const { username, eventUrl } = await params;
+
+  const data = await getData(eventUrl, username);
+
+  const selectedDate = searchParams.date ? new Date(searchParams.date) : new Date();
+
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  }).format(selectedDate)
+
   return (
     <div className="min-h-screen w-screen flex items-center justify-center">
       <Card className="max-w-[1000px] w-full mx-auto">
-        <CardContent className="p-5 md:grid md:grid-cols-[1fr,auto,1fr,auto,1fr]">
-          <div className="">
+        <CardContent className="p-5 md:grid md:grid-cols-[1fr,auto,1fr,auto,1fr] md:gap-5">
+          {/* Left column */}
+          <div className="col-start-1 col-end-2">
             <img
               src={data.User?.image as string}
               alt="user-image"
@@ -76,7 +87,7 @@ export default async function BookingForm({
               <p className="flex items-center">
                 <CalendarX2 className="text-primary mr-2 size-4" />
                 <span className="text-sm font-medium text-muted-foreground">
-                  05 Sept 2024
+                  {formattedDate}
                 </span>
               </p>
               <p className="flex items-center">
@@ -93,8 +104,32 @@ export default async function BookingForm({
               </p>
             </div>
           </div>
-          <Separator orientation="vertical" className="h-full w-[1px]" />
-          <Calendar />
+
+          {/* Separator 1 */}
+          <Separator
+            orientation="vertical"
+            className="h-full w-[1px] col-start-2"
+          />
+
+          {/* Calendar (middle) */}
+          <div className="col-start-3 col-end-4">
+            <RenderCalendar scheduled={data.User?.scheduled as any} />
+          </div>
+
+          {/* Separator 2 */}
+          <Separator
+            orientation="vertical"
+            className="h-full w-[1px] col-start-4"
+          />
+
+          {/* Right section (new area) */}
+          <div className="col-start-5 col-end-6">
+            <h2 className="text-lg font-semibold">Extra Section</h2>
+            <p className="text-sm text-muted-foreground">
+              You can add booking confirmation, instructions, or another
+              component here.
+            </p>
+          </div>
         </CardContent>
       </Card>
     </div>
