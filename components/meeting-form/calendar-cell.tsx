@@ -45,9 +45,9 @@ export function CalendarCell({
         <div
           className={cn(
             "size-full rounded-sm flex items-center justify-center text-sm font-semibold cursor-pointer",
-            isSelected ? "bg-primary text-white" : "",
+            isSelected ? "bg-primary text-black" : "",
             finallyIsDisabled ? "text-muted-foreground cursor-not-allowed" : "",
-            !isSelected && !finallyIsDisabled ? "bg-secondary/20" : ""
+            !isSelected && !finallyIsDisabled ? "bg-secondary/20 " : ""
           )}
         >
           {formattedDate}

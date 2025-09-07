@@ -1,5 +1,6 @@
 
 import { RenderCalendar } from "@/components/meeting-form/render-calender";
+import { TimeTable } from "@/components/meeting-form/time-table";
 import {
   Card,
   CardContent,
@@ -50,20 +51,25 @@ export default async function BookingForm({
   params,
   searchParams,
 }: {
-  params: Promise<{ username: string; eventUrl: string }>;
-  searchParams: {date?: string}
+  params: { username: string; eventUrl: string };
+  searchParams: Promise<{ date?: string }>;
 }) {
   const { username, eventUrl } = await params;
 
   const data = await getData(eventUrl, username);
 
-  const selectedDate = searchParams.date ? new Date(searchParams.date) : new Date();
+  // Await searchParams properly
+  const { date } = await searchParams;
+
+  const selectedDate = date ? new Date(date) : new Date();
 
   const formattedDate = new Intl.DateTimeFormat("en-US", {
     weekday: "long",
     day: "numeric",
-    month: "long"
-  }).format(selectedDate)
+    month: "long",
+  }).format(selectedDate);
+
+  
 
   return (
     <div className="min-h-screen w-screen flex items-center justify-center">
@@ -122,13 +128,9 @@ export default async function BookingForm({
             className="h-full w-[1px] col-start-4"
           />
 
-          {/* Right section (new area) */}
+          {/* Right section */}
           <div className="col-start-5 col-end-6">
-            <h2 className="text-lg font-semibold">Extra Section</h2>
-            <p className="text-sm text-muted-foreground">
-              You can add booking confirmation, instructions, or another
-              component here.
-            </p>
+            <TimeTable duration={data.duration} userName={username} selectedDate={selectedDate} />
           </div>
         </CardContent>
       </Card>
