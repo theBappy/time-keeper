@@ -164,3 +164,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+@keyframes draw-check {
+  0% {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 22;
+  }
+  100% {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-check {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+  animation: draw-check 0.5s ease-out forwards;
+}
+
