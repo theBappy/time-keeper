@@ -1,3 +1,4 @@
+import { CopyLink } from "@/components/copy-link-menu";
 import { EmptyState } from "@/components/empty-state";
 import { Button } from "@/components/ui/button";
 import {
@@ -100,13 +101,14 @@ export default async function DashboardPage() {
                             Preview
                           </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem className="cursor-pointer">
-                          <Link2 className="mr-2 size-4" />
-                          Copy
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="cursor-pointer">
+                        <CopyLink
+                          meetingUrl={`${process.env.NEXT_PUBLIC_URL}/${data.userName}/${item.url}`}
+                        />
+                        <DropdownMenuItem className="cursor-pointer" asChild>
+                          <Link href={`/dashboard/event/${item.id}`}>
                           <Pen className="mr-2 size-4" />
                           Edit
+                          </Link>
                         </DropdownMenuItem>
                       </DropdownMenuGroup>
                       <DropdownMenuSeparator />
