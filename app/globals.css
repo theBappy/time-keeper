@@ -185,3 +185,17 @@
   animation: draw-check 0.5s ease-out forwards;
 }
 
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -10px) scale(1.05);
+  }
+}
+
+.animate-glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
