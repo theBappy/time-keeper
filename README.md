@@ -81,16 +81,16 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 📌 Installation & Setup
 
 Clone the repository:
-git clone https://github.com/theBappy/time-keeper
-cd timekeeper
-Install dependencies:
-npm install
-Configure environment variables:
-Supabase URL & Key
-Nylas API credentials
-OAuth credentials (Google & GitHub)
+git clone https://github.com/theBappy/time-keeper<br>
+cd timekeeper<br>
+Install dependencies:<br>
+npm install<br>
+Configure environment variables:<br>
+Supabase URL & Key<br>
+Nylas API credentials<br>
+OAuth credentials (Google & GitHub)<br>
 
-Run the development server:
+Run the development server:<br>
 npm run dev
 
 
@@ -107,7 +107,6 @@ Performance Optimized – Fast load times, server-side rendering, minimal plugin
 Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
 
 
-TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.
-=======
-TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.
+❤❤❤
+TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.
 
