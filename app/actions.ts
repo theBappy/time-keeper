@@ -262,8 +262,72 @@ export async function CancelMeeting(formData: FormData) {
     identifier: userData.grantId as string,
     queryParams: {
       calendarId: userData.grantEmail as string,
-    }
+    },
   });
 
-  revalidatePath("/dashboard/meetings")
+  revalidatePath("/dashboard/meetings");
+}
+
+export async function EditEventTypeAction(prevState: any, formData: FormData) {
+  const session = await requireUser();
+
+  const submission = parseWithZod(formData, {
+    schema: eventTypeSchema,
+  });
+
+  if (submission.status !== "success") {
+    return submission.reply();
+  }
+
+  const data = await prisma.eventType.update({
+    where: {
+      id: formData.get("id") as string,
+      userId: session.user?.id,
+    },
+    data: {
+      title: submission.value.title,
+      duration: submission.value.duration,
+      url: submission.value.url,
+      description: submission.value.description,
+      videoCallSoftware: submission.value.videoCallSoftware,
+    },
+  });
+
+  return redirect("/dashboard");
+}
+
+export async function EventStatusSwitcherAction(
+  prevState: any,
+  {
+    eventTypeId,
+    isChecked,
+  }: {
+    eventTypeId: string;
+    isChecked: boolean;
+  }
+) {
+  try {
+    const session = await requireUser();
+
+    const data = await prisma.eventType.update({
+      where: {
+        id: eventTypeId,
+        userId: session.user?.id,
+      },
+      data: {
+        active: isChecked,
+      },
+    });
+    revalidatePath("/dashboard");
+
+    return {
+      status: "success",
+      message: "Event status updated!",
+    };
+  } catch (error) {
+    return {
+      status: "error",
+      message: "Something went wrong",
+    };
+  }
 }
