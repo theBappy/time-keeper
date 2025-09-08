@@ -17,7 +17,7 @@ It’s designed for efficiency, usability, and performance, providing a seamless
 <img width="1860" height="1200" alt="hero" src="https://github.com/user-attachments/assets/3759ebd7-9c9d-476e-ad38-ceea3a0505a0" />
 
 <br><br>
-🚀 <b>Key Features</b><br>
+🚀 <b>Key Features</b><br><br>
 🔹 Advanced Scheduling
 
 Effortlessly create, update, and cancel meetings
@@ -77,7 +77,7 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 	Server-Side Rendering	Supabase Storage	Auth.js	
 	
 				
-	
+<br>
 📌 <b>Installation & Setup</b>
 
 🛠 Clone the repository:
@@ -85,7 +85,7 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 git clone https://github.com/theBappy/time-keeper.git
 cd time-keeper
 
-
+<br>
 📦 Install dependencies:
 
 npm install
@@ -105,7 +105,7 @@ npm run dev
 
 
 ☁️ Deploy to Vercel for production-ready hosting.
-
+<br><br>
 🎨 <b>Design & UX Principles</b>
 
 🏗 Clean Architecture – Maintainable and scalable codebase
@@ -116,7 +116,7 @@ npm run dev
 
 🔗 Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
 
-
+<br>
 ❤❤❤
 <i>TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.</i>
 
