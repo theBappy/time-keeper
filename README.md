@@ -14,6 +14,8 @@ Access a fully custom-built calendar without relying on third-party plugins
 
 It’s designed for efficiency, usability, and performance, providing a seamless experience across devices.
 
+<img width="1860" height="1200" alt="hero" src="https://github.com/user-attachments/assets/3759ebd7-9c9d-476e-ad38-ceea3a0505a0" />
+
 🚀 Key Features
 🔹 Advanced Scheduling
 
@@ -86,8 +88,13 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 
 Clone the repository:
 
+<<<<<<< HEAD
 git clone https://github.com/theBappy/time-keeper.git
 cd time-keeper
+=======
+git clone https://github.com/theBappy/time-keeper
+cd timekeeper
+>>>>>>> d6f54bbc39552c2f35e12acb2aa53758405daeb3
 
 
 Install dependencies:
@@ -120,4 +127,8 @@ Performance Optimized – Fast load times, server-side rendering, minimal plugin
 
 Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
 
+<<<<<<< HEAD
 TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.
+=======
+TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.
+>>>>>>> d6f54bbc39552c2f35e12acb2aa53758405daeb3
