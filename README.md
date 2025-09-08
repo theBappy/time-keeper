@@ -16,7 +16,7 @@ It’s designed for efficiency, usability, and performance, providing a seamless
 
 <img width="1860" height="1200" alt="hero" src="https://github.com/user-attachments/assets/3759ebd7-9c9d-476e-ad38-ceea3a0505a0" />
 
-🚀 Key Features
+🚀 Key Features<br>
 🔹 Advanced Scheduling
 
 Effortlessly create, update, and cancel meetings
