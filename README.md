@@ -73,38 +73,47 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 	Node.js	PostgreSQL	OAuth (Google/GitHub)	
 	
 
-
 	Server-Side Rendering	Supabase Storage	Auth.js	
 	
 				
 	
 📌 Installation & Setup
 
-Clone the repository:
-git clone https://github.com/theBappy/time-keeper<br>
-cd timekeeper<br>
-Install dependencies:<br>
-npm install<br>
-Configure environment variables:<br>
-Supabase URL & Key<br>
-Nylas API credentials<br>
-OAuth credentials (Google & GitHub)<br>
+🛠 Clone the repository:
 
-Run the development server:<br>
+git clone https://github.com/theBappy/time-keeper.git
+cd time-keeper
+
+
+📦 Install dependencies:
+
+npm install
+
+
+🔑 Configure environment variables:
+
+Supabase URL & Key
+
+Nylas API credentials
+
+OAuth credentials (Google & GitHub)
+
+🚀 Run the development server:
+
 npm run dev
 
 
-Deploy to Vercel for production-ready hosting.
+☁️ Deploy to Vercel for production-ready hosting.
 
 🎨 Design & UX Principles
 
-Clean Architecture – Maintainable and scalable codebase
+🏗 Clean Architecture – Maintainable and scalable codebase
 
-Modern UI – Smooth animations, responsive layout, dark mode
+🎨 Modern UI – Smooth animations, responsive layout, dark mode
 
-Performance Optimized – Fast load times, server-side rendering, minimal plugins
+⚡ Performance Optimized – Fast load times, server-side rendering, minimal plugins
 
-Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
+🔗 Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
 
 
 ❤❤❤
