@@ -81,31 +81,16 @@ Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
 📌 Installation & Setup
 
 Clone the repository:
-
-
-git clone https://github.com/theBappy/time-keeper.git
-cd time-keeper
-=======
 git clone https://github.com/theBappy/time-keeper
 cd timekeeper
-
-
-
 Install dependencies:
-
 npm install
-
-
 Configure environment variables:
-
 Supabase URL & Key
-
 Nylas API credentials
-
 OAuth credentials (Google & GitHub)
 
 Run the development server:
-
 npm run dev
 
 
