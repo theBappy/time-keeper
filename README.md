@@ -6,6 +6,8 @@ TimeKeeper is a modern calendar scheduling platform designed to simplify meeting
 
 It is fully custom-built from scratch, ensuring a unique and optimized experience without relying on heavy third-party plugins.
 
+<img width="1860" height="1200" alt="hero" src="https://github.com/user-attachments/assets/3759ebd7-9c9d-476e-ad38-ceea3a0505a0" />
+
 🚀 Key Features
 🔹 Advanced Scheduling
 
@@ -79,7 +81,7 @@ Frontend	Backend	Database	Authentication	APIs & Libraries
 
 Clone the repository:
 
-git clone https://github.com/yourusername/timekeeper.git
+git clone https://github.com/theBappy/time-keeper
 cd timekeeper
 
 
