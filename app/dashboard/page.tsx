@@ -1,5 +1,6 @@
 import { CopyLink } from "@/components/copy-link-menu";
 import { EmptyState } from "@/components/empty-state";
+import { MenuActiveSwitch } from "@/components/event-switcher";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -133,8 +134,10 @@ export default async function DashboardPage() {
                   </div>
                 </Link>
                 <div className="bg-muted px-5 py-3 justify-between items-center flex">
-                  <Switch />
-                  <Button>Edit Event</Button>
+                  <MenuActiveSwitch initialChecked={item.active} eventTypeId={item.id} />
+                  <Button asChild>
+                    <Link href={`/dashboard/event/${item.id}`}>Edit Event</Link>
+                  </Button>
                 </div>
               </div>
             ))}

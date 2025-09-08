@@ -25,7 +25,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
 import { SubmitButton } from "@/components/submit-button";
-import { CreateEventTypeAction } from "@/app/actions";
+import { EditEventTypeAction } from "@/app/actions";
 import { useForm } from "@conform-to/react";
 import { eventTypeSchema } from "@/lib/zodSchemas";
 import { parseWithZod } from "@conform-to/zod/v4";
@@ -43,9 +43,9 @@ interface Props {
 
 export function EditEventForm({id, title, url,description, duration, callProvider}:Props) {
   const [activePlatform, setActivePlatform] =
-    useState<VideoCallProvider>("Google Meet");
+    useState<VideoCallProvider>(callProvider as VideoCallProvider);
 
-  const [lastResult, action] = useActionState(CreateEventTypeAction, undefined);
+  const [lastResult, action] = useActionState(EditEventTypeAction, undefined);
 
   const [form, fields] = useForm({
     lastResult,
@@ -63,20 +63,20 @@ export function EditEventForm({id, title, url,description, duration, callProvide
     <div className="w-full h-full flex flex-1 items-center justify-center">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>Add new appointments</CardTitle>
+          <CardTitle>Edit Appointments</CardTitle>
           <CardDescription>
-            Create new event type that allow people to have an appointment with
-            you!
+            Edit your appointment type that allows people to have a meeting with you!
           </CardDescription>
         </CardHeader>
         <form id={form.id} onSubmit={form.onSubmit} action={action} noValidate>
+          <input type="hidden" name="id" value={id} />
           <CardContent className="grid gap-y-5">
             <div className="flex flex-col gap-y-2">
               <Label>Title</Label>
               <Input
                 name={fields.title.name}
                 key={fields.title.key}
-                defaultValue={fields.title.initialValue}
+                defaultValue={title}
                 placeholder="30 mins meeting"
               />
               <p className="text-red-500 text-sm">{fields.title.errors}</p>
@@ -90,7 +90,7 @@ export function EditEventForm({id, title, url,description, duration, callProvide
                 <Input
                   name={fields.url.name}
                   key={fields.url.key}
-                  defaultValue={fields.url.initialValue}
+                  defaultValue={url}
                   className="rounded-l-none"
                   placeholder="example-url-1"
                 />
@@ -102,7 +102,7 @@ export function EditEventForm({id, title, url,description, duration, callProvide
               <Textarea
                 name={fields.description.name}
                 key={fields.description.key}
-                defaultValue={fields.description.initialValue}
+                defaultValue={description}
                 placeholder="Let's have a meeting to talk!"
               />
               <p className="text-red-500 text-sm">
@@ -114,7 +114,7 @@ export function EditEventForm({id, title, url,description, duration, callProvide
               <Select
                 name={fields.duration.name}
                 key={fields.duration.key}
-                defaultValue={fields.duration.initialValue}
+                defaultValue={String(duration)}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="select a duration" />
@@ -181,7 +181,7 @@ export function EditEventForm({id, title, url,description, duration, callProvide
             <Button variant="secondary" asChild>
               <Link href="/dashboard">Cancel</Link>
             </Button>
-            <SubmitButton text="Create Event Type" />
+            <SubmitButton text="Edit Event" />
           </CardFooter>
         </form>
       </Card>
