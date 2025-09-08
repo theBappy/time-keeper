@@ -118,5 +118,5 @@ npm run dev
 
 
 ❤❤❤
-<italic>TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.</italic>
+<i>TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.</i>
 
