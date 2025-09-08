@@ -105,7 +105,7 @@ npm run dev
 
 
 ☁️ Deploy to Vercel for production-ready hosting.
-<br><br>
+<br><br><br>
 🎨 <b>Design & UX Principles</b>
 
 🏗 Clean Architecture – Maintainable and scalable codebase
@@ -116,7 +116,7 @@ npm run dev
 
 🔗 Advanced Integrations – Calendar API, OAuth, email notifications, file uploads, and real-time updates
 
-<br>
+<br><br>
 ❤❤❤
 <i>TimeKeeper combines professional-grade scheduling functionality with a modern, intuitive design, making it perfect for individuals, teams, and organizations who need seamless calendar management.TimeKeeper delivers a professional, elegant, and highly functional scheduling platform, perfect for teams and individuals who need seamless calendar management.</i>
 
