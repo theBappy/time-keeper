@@ -11,17 +11,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Switch } from "@/components/ui/switch";
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/hooks";
-import {
-  ExternalLink,
-  Link2,
-  Pen,
-  Settings,
-  Trash,
-  Users2,
-} from "lucide-react";
+import { ExternalLink, Pen, Settings, Trash, Users2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -107,15 +99,17 @@ export default async function DashboardPage() {
                         />
                         <DropdownMenuItem className="cursor-pointer" asChild>
                           <Link href={`/dashboard/event/${item.id}`}>
-                          <Pen className="mr-2 size-4" />
-                          Edit
+                            <Pen className="mr-2 size-4" />
+                            Edit
                           </Link>
                         </DropdownMenuItem>
                       </DropdownMenuGroup>
                       <DropdownMenuSeparator />
-                      <DropdownMenuItem className="cursor-pointer">
-                        <Trash className="mr-2 size-4" />
-                        Delete
+                      <DropdownMenuItem asChild className="cursor-pointer">
+                        <Link href={`/dashboard/event/${item.id}/delete`}>
+                          <Trash className="mr-2 size-4" />
+                          Delete
+                        </Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -134,7 +128,10 @@ export default async function DashboardPage() {
                   </div>
                 </Link>
                 <div className="bg-muted px-5 py-3 justify-between items-center flex">
-                  <MenuActiveSwitch initialChecked={item.active} eventTypeId={item.id} />
+                  <MenuActiveSwitch
+                    initialChecked={item.active}
+                    eventTypeId={item.id}
+                  />
                   <Button asChild>
                     <Link href={`/dashboard/event/${item.id}`}>Edit Event</Link>
                   </Button>
