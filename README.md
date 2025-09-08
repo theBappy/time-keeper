@@ -8,25 +8,24 @@ TimeKeeper is a professional-grade calendar scheduling platform designed to stre
 
 <br><br>
 🚀 <b>Key Features</b><br><br>
-Features: 
-🌐 Next.js App Router
-🔍 Nylas Calendar API
-💪 Create Meetings, Cancel Meetings, Search up the calendar
-🔒 Custom auth using Next–Auth
-🔑 OAuth (Google and GitHub)
-✏️ Custom booking form with dynamic availability & real-time updates
-📆 Fully custom-built calendar—no plugins, all from scratch!
-👋 Availability Integration into the calendar
-💿 Supabase Postgres Database
-💨 Prisma Orm
-🌐 Fully responsive landing page with a dark mode toggle
-✅ Server Validation using Zod and Conform
-😱 Unique Username validation
-📧 Automatic email confirmations & real-time event syncing
-🗂️ File Upload with Uploadthing
-🖥️ Beautiful dashboard for meetings, settings, and availability
-🎨 Styling with Tailwindcss and Shadcn UI
-😶‍🌫️ Deployment to vercel
+🌐 Next.js App Router<br>
+🔍 Nylas Calendar API<br>
+💪 Create Meetings, Cancel Meetings, Search up the calendar<br>
+🔒 Custom auth using Next–Auth<br>
+🔑 OAuth (Google and GitHub)<br>
+✏️ Custom booking form with dynamic availability & real-time updates<br>
+📆 Fully custom-built calendar—no plugins, all from scratch!<br>
+👋 Availability Integration into the calendar<br>
+💿 Supabase Postgres Database<br>
+💨 Prisma Orm<br>
+🌐 Fully responsive landing page with a dark mode toggle<br>
+✅ Server Validation using Zod and Conform<br>
+😱 Unique Username validation<br>
+📧 Automatic email confirmations & real-time event syncing<br>
+🗂️ File Upload with Uploadthing<br>
+🖥️ Beautiful dashboard for meetings, settings, and availability<br>
+🎨 Styling with Tailwindcss and Shadcn UI<br>
+😶‍🌫️ Deployment to vercel<br>
 
 🛠 <b>Tech Stack</b>
 Frontend	Backend	Database	Authentication	APIs & Libraries	Motion & UI
